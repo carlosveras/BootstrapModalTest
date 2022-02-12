@@ -1,0 +1,95 @@
+﻿@model IEnumerable<BootstrapModalTest.Models.Socio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- modal placeholder-->
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Sócios</div>
+
+    <div class="panel-body ">
+        @Html.ActionLink("Novo sócio", "Create", "Socios", null, new { data_modal = "", id = "btnCreate", @class = "btn btn-sm btn-primary pull-right", title = "Novo Sócio" })
+    </div>
+
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SobreNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NrSocio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataInclusao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataPrimHosp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apelido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tratamento)
+            </th>
+            <th>Ações...</th>
+        </tr>
+
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SobreNome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NrSocio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataInclusao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataPrimHosp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apelido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sexo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tratamento)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Details", new { id = item.SocioID }, new { @class = "btn btn-primary btn-xs glyphicon glyphicon-list-alt", data_modal = "", title = "Detalhes" })
+                    @Html.ActionLink(" ", "Edit", new { id = item.SocioID }, new { @class = "glyphicon glyphicon-edit btn btn-primary btn-xs", data_modal = "", title = "Editar" })
+                    @Html.ActionLink(" ", "Delete", new { id = item.SocioID }, new { @class = "glyphicon glyphicon-trash btn btn-danger btn-xs", data_modal = "", title = "Excluir" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modalform")
+}

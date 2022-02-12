@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Modal Forms</h1>
+    <p class="lead">Siemanko!</p>
+    <p>This ASP.NET C# sample uses MVC5 to demonstrate the CRUD operations using dynamic forms displayed with <a href="http://api.jquery.com/jquery.ajax/" target="_blank">jQuery.ajax()</a> on Twitter Bootstrap 3.1.1 <a href="http://getbootstrap.com/javascript/#modals" target="_blank">modals</a>.
+</div>
+<p>This sample follows/replaces/augments this <a href="http://stackoverflow.com/a/12843281" target="_blank">post and sample on stackoverflow</a> which was prepared for previous version of Bootstrap.</p>
+<p>To conquer problems and help some people to figure out how to port the post sample to mvc5/Bootstrap3 I've prepared this one. It looks like everthing is working including validation on forms.</p>
+
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Demo</h2>
+        <p>
+
+            <a href="@Url.Action("Index", "People")">Click here</a> do play with modals...
+        </p>    
+    </div>
+
+    <div class="col-md-2 col-md-offset-7">
+        <p>Have fun !!! </p>
+        <div class="text-muted">Jarek Zwierz (zjerry)</div>
+    </div>
+</div>
+

@@ -1,0 +1,67 @@
+﻿@model BootstrapModalTest.Models.Socio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" id="myModalLabel">Detalhes do sócio</h4>
+</div>
+
+<div class="modal-body">
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SobreNome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SobreNome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NrSocio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NrSocio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataInclusao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataInclusao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataPrimHosp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataPrimHosp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Apelido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Apelido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sexo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tratamento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tratamento)
+        </dd>
+    </dl>
+</div>
+<div class="modal-footer">
+    <button class="btn" data-dismiss="modal">Ok</button>
+</div>

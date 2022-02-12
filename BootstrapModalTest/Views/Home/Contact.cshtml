@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<div class="row">
+    <div class="col-md-12">
+
+        <div id="map" style="height: 400px; width: 100%;">
+            Trwa ładowanie mapy...
+        </div>
+    </div>
+</div>
+<br>
+<div class="well">
+    <div class="row">
+        <div class="col-sm-4">
+            <address>
+                <strong>Fabro T.Skorupa J.Zwierz spółka jawna</strong><br />
+                ul.Strońska 3/1<br />
+                01-461 Warszawa
+            </address>
+        </div>
+        <div class="col-sm-4">
+            <address>
+                <strong>Adres biura</strong><br />
+                ul. Babimojska 11 lok. 7A<br />
+                01-466 Warszawa<br />
+                <abbr title="E-mail">E:</abbr><a href="mailto:#">biuro@fabro.pl</a><br />
+                <abbr title="Telefon">T:</abbr>(+48) 22 665 19 93<br />
+                <abbr title="Fax">F:</abbr>(+48) 22 664 04 73
+            </address>
+        </div>
+        <div class="col-sm-4">
+            <address>
+                <strong>Dane rejestracyjne</strong><br />
+                KRS:  0000171832<br />
+                REGON:  015550890<br />
+                NIP:  522-270-05-22
+            </address>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts {
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    @Scripts.Render("~/bundles/gmap")
+}

@@ -1,0 +1,46 @@
+﻿@model BootstrapModalTest.Models.Socio
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" id="myModalLabel">Deseja excluir este sócio?</h4>
+</div>
+
+<div class="modal-body">
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SobreNome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SobreNome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NrSocio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NrSocio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Apelido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Apelido)
+        </dd>
+    </dl>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal">No</button>
+        <input class="btn btn-danger" type="submit" value="Yes" />
+    </div>
+}
